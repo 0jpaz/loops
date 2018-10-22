@@ -1,38 +1,48 @@
-// For-loop functions
-
 function positiveIntSum(limit){
     let sum = 0;
-    let limit = 100;
-    for (let i= 1; i<= limit ; i ++){
-    sum = sum + i ;
-}
-return sum;
-
-
-function additionPatternSum(start, diff,limit){
-let sum = start;
-for(let j=0; j<limit; j ++){
-    sum = sum + diff*j;
-
+    for(let k=1; k<=limit; k++){
+        sum = sum + k;
+    }
+    return sum;
 }
 
 
+function addSum(start, diff, max){
+    //setting up varaibles
+    let sum = 0;
+    let currentNumber = start;
 
+    while(currentNumber <= max){
+        //adding to the sum.
+        sum = sum + currentNumber;
+        //moving to the next number in the list.
+        currentNumber = currentNumber + diff;
+    }
 
-// While-loop function
-
-function multiplicationPatternSum(star, factor, max){
-let sum = start
-let k=1
-while (k <= max)
-sum=  sum + factor*k;
-k= factor*k;
-
-
+    return sum;
 }
 
+function multSum(start, factor, max){
+    //setting up varaibles
+    let sum = 0;
+    let currentNumber = start;
 
+    while(currentNumber <= max){
+        //adding to the sum.
+        sum = sum + currentNumber;
+        //moving to the next number in the list.
+        currentNumber = currentNumber * factor;
+    }
 
+    return sum;
+}
+console.log(positiveIntSum(1500));
+console.log(positiveIntSum(2000000));
 
+console.log(addSum(-80, 60, 2860));
+console.log(addSum(7, 2, 50000));
 
-//Later copy paste the checking code below here.
+question 2 was larger because the answer is equal to 2000000 and question 3 is only 2860
+
+console.log(multSum(4, 3, 50000));
+console.log(multSum(2, -3, 1000000 ));
